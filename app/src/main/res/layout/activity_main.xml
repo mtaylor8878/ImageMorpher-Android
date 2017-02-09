@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit_icon"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:onClick="startEditMode" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit\nLines"
+                android:textSize="9dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete_icon"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:onClick="deleteLine"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete\nLine"
+                android:textSize="9dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hide_icon"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:onClick="toggleLines" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hide\nLines"
+                android:textSize="9dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play_icon"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:onClick="startMorph" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Morph"
+                android:textSize="9dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/restart_icon"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:onClick="resetViews" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:textSize="9dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frames:"
+                android:textSize="9dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="bottom|center_horizontal" />
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:id="@+id/number_picker_frames"
+                android:layout_gravity="bottom" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="90"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <taylor.matt.imagemorpher.DrawableImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/image_view_left"
+                android:background="@drawable/image_view_bg" />
+            <taylor.matt.imagemorpher.DrawableImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/image_view_right"
+                android:background="@drawable/image_view_bg"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_view_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Placeholder Text"
+        android:layout_marginBottom="30dp"
+        android:padding="5dp"
+        android:background="#b8000000"
+        android:textColor="#ffffff"
+        android:visibility="invisible" />
+    <ProgressBar
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:id="@+id/progress_bar"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="10dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:visibility="invisible" />
+</FrameLayout>
+

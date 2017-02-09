@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/button_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_icon"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true">
+            <requestFocus />
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/next_icon"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+        <ImageButton
+            android:id="@+id/button_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prev_icon"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animation Speed:"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="30dp"/>
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/number_picker_speed"
+            android:layout_gravity="bottom|center_horizontal" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/image_view_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside" />
+</LinearLayout>
